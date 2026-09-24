@@ -54,18 +54,9 @@ elif mood.lower()=="stressed":
 elif mood.lower()== "overthinking":
     mood_message = "Take a short break and your mind some calm time."
 else:
-    mood_message = "Thanks for sharing your mood."
+    mood_message = "Thanks for sharing your mood.keep checking in with yourself."
 
-mood = mood.lower()
-
-if mood in["happy","good","great","excited"]:
-    mood_message = "your mood looks positive today!"
-elif mood in ["sad","low","upset","angry"]:
-    mood_message = "Take some time to relax and take care of yourself."
-else:
-    mood_message = "Thanks for sharing your mood. Keep checking in with yourself."
-
-sleep_core = 0
+sleep_score = 0
 
 if 6 <= sleep <=9:
     sleep_score =25
@@ -148,18 +139,18 @@ elif study_score < 25:
 elif screen_score < 20:
     print("Tip: Try to reduce your screen time.")
 elif water_score < 15:
-    print("Tip: try to improve your water intake.")
+    print("Tip:Try to improve your water intake.")
 elif exercise_score < 15:
     print("Tip: Try to include more physical activity.")
 else:
     print("Tip: Great balance! keep it up.")
 
-if productivity =="high":
+if productivity =="High":
     print("Great job! keep maintaining your healthy routine.")
-elif productivity =="moderate":
+elif productivity =="Moderate":
     print("Good effort! Try to increase your study time and reduce screen time.")
 else:
-    print("Take small steps today. Try to improve ypur sleep, study time, and screen habits.")
+    print("Take small steps today. Try to improve your sleep, study time, and screen habits.")
 
 with open("daily_data.txt", "a") as file:
     file.write(f"Name: {name}, sleep: {sleep}, study: {study}, Screen Time: {screen_time}, Water: {water}, Exercise:{exercise}, Mood: {mood}, wellness score:{wellness_score}\n")
